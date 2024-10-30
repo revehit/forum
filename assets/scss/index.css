@@ -1,0 +1,458 @@
+@charset "UTF-8";
+/* reset.scss */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  flex-shrink: 1;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+
+:lang(ko) {
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+address,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+html {
+  /* 스크롤 바의 색상 지정 */
+  /* 스크롤 바 호버 시 색상 지정 */
+}
+html ::-webkit-scrollbar {
+  width: 17px;
+  /* 스크롤 바의 너비 */
+  background-color: #f6f6f6;
+  /* 스크롤 바의 배경색 */
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  /* 스크롤 바의 색상 */
+}
+html ::-webkit-scrollbar-thumb:hover {
+  /* 스크롤 바의 색상 */
+}
+html ::-webkit-scrollbar-button {
+  width: 17px;
+  height: 16px;
+}
+
+body {
+  color: var(--color-white);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+caption,
+legend {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+}
+
+table {
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+picture {
+  display: inline-block;
+}
+
+picture > img {
+  display: block;
+}
+
+img,
+picture,
+video,
+canvas {
+  max-width: 100%;
+  border: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+hr.type-dashed {
+  border-top-style: dashed;
+}
+hr.type-hide {
+  display: none;
+}
+
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  text-underline-position: under;
+  color: var(--color-white);
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+}
+button:disabled {
+  cursor: default;
+}
+
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  -webkit-text-fill-color: #000 !important;
+  box-shadow: 0 0 0px 1000px #fff inset !important;
+}
+
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+  -webkit-text-fill-color: #000 !important;
+  box-shadow: 0 0 0px 1000px #fff inset !important;
+}
+
+svg {
+  fill: transparent;
+}
+
+:root {
+  /* color */
+  --color-white: #fff;
+  --color-darken: #111;
+  --color-black: #000;
+  --color-point: #ff3d00;
+}
+
+/* Pretendard */
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-Black.woff") format("woff"), url("fonts/Pretendard-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-Bold.woff") format("woff"), url("fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-ExtraBold.woff") format("woff"), url("fonts/Pretendard-ExtraBold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-ExtraLight.woff") format("woff"), url("fonts/Pretendard-ExtraLight.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-Light.woff") format("woff"), url("fonts/Pretendard-Light.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-Medium.woff") format("woff"), url("fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-Regular.woff") format("woff"), url("fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-SemiBold.woff") format("woff"), url("fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  font-style: normal;
+  src: url("fonts/Pretendard-Thin.woff") format("woff"), url("fonts/Pretendard-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  padding: 1rem 0;
+  background: linear-gradient(0deg, rgba(12, 13, 16, 0), #0c0d10 90%);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+}
+.header-inner .flex {
+  margin-left: 15rem;
+}
+.header-inner .flex .slash {
+  padding: 0 1rem;
+}
+.header-inner .flex * {
+  color: var(--color-white);
+}
+.header-inner .talk {
+  margin-left: auto;
+}
+
+section {
+  background-color: vaR(--color-darken);
+}
+section .container {
+  height: 100vh;
+}
+
+.section1 .section-inner {
+  height: 100%;
+  display: flex;
+}
+.section1 .heading-wrap {
+  width: 70%;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.section1 .heading-wrap div {
+  width: 100%;
+  margin-top: auto;
+}
+.section1 .heading-wrap div + div {
+  margin-top: 0;
+}
+.section1 .heading-wrap .intro {
+  font-size: 1rem;
+}
+.section1 .heading-wrap .intro p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.section1 .heading-wrap .intro span {
+  font-size: 1.5rem;
+}
+.section1 .heading-wrap .heading {
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 7rem;
+  padding-bottom: 3rem;
+}
+.section1 .scope-wrap {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.section1 .scope-wrap .box {
+  margin-top: 10rem;
+}
+.section1 .scope-wrap .box + .box {
+  margin-top: auto;
+  margin-bottom: 3rem;
+}
+.section1 .scope-wrap .box .line {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: var(--color-white);
+  opacity: 0.2;
+  margin: 1rem 0;
+}
+.section1 .scope-wrap .box ul li {
+  opacity: 0.2;
+  font-size: 0.8rem;
+}
+.section1 .scope-wrap .box ul li + li {
+  margin-top: 0.5rem;
+}
+.section1 .scope-wrap .box .awords-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section1 .scope-wrap .box .awords-icons .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0.5;
+  transition: all 0.4s;
+}
+.section1 .scope-wrap .box .awords-icons .icon:hover {
+  opacity: 1;
+}
+
+/* common style */
+.flex {
+  display: flex;
+}
+.flex.align-center {
+  align-items: center;
+}
+.flex.align-start {
+  align-items: flex-start;
+}
+.flex.align-ent {
+  align-items: flex-end;
+}
+.flex.justify-center {
+  justify-content: center;
+}
+.flex.justify-start {
+  justify-content: start;
+}
+.flex.justify-space-between {
+  justify-content: space-between;
+}
+
+.opacity-02 {
+  opacity: 0.2;
+}
+
+.opacity-05 {
+  opacity: 0.5;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+/* text */
+.text-bold {
+  font-weight: bold;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
+
+/* color */
+.point {
+  color: var(--color-point);
+}/*# sourceMappingURL=index.css.map */

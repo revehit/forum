@@ -1,0 +1,50 @@
+@import './components/components.scss';
+
+/* common style */
+.flex {
+  display: flex;
+  &.align-center {
+    align-items: center;
+  }
+  &.align-start {
+    align-items: flex-start;
+  }
+  &.align-ent {
+    align-items: flex-end;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-start {
+    justify-content: start;
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+}
+
+.opacity-02 {
+  opacity: 0.2;
+}
+.opacity-05 {
+  opacity: 0.5;
+}
+.opacity-1 {
+  opacity: 1;
+}
+
+/* text */
+.text-bold {
+  font-weight: bold;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.text-sm {
+  font-size: 0.8rem;
+}
+
+/* color */
+.point {
+  color: var(--color-point);
+}

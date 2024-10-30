@@ -1,0 +1,22 @@
+header {
+  width: 100%;
+  position: fixed;
+  padding: 1rem 0;
+  background: linear-gradient(0deg, #0c0d1000, #0c0d10 90%);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  .flex {
+    margin-left: 15rem;
+    .slash {
+      padding: 0 1rem;
+    }
+    & * {
+      color: var(--color-white);
+    }
+  }
+  .talk {
+    margin-left: auto;
+  }
+}

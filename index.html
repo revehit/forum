@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="./assets/scss/index.css">
+</head>
+<body>
+  <script>
+    $(function() {
+      $('#header').load('./components/header/index.html');
+      $('#section1').load('./components/section1/index.html');
+      $('#section2').load('./components/section2/index.html');
+    });
+  </script>
+
+  <div id="header"></div>
+
+  <main id="contents">
+    <div id="section1"></div>
+    <div id="section2"></div>
+
+    <section>
+      <div class="container"></div>
+    </section>
+    <section>
+      <div class="container"></div>
+    </section>
+    <section>
+      <div class="container"></div>
+    </section>
+    <section>
+      <div class="container"></div>
+    </section>
+  </main>
+</body>
+</html>
