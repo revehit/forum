@@ -1,53 +1,135 @@
-<section class="section1">
-  <div class="container">
-    <div class="section-inner">
-      <div class="heading-wrap">
-        <div class="intro">
-          <p class="opacity-05">Hi there! this is</p>
-          <span class="text-bold opacity-1">REVE</span>
-          <span class="text-bold opacity-05">HIT</span>
-        </div>
-        <div class="heading">
-          <p>DESIGN</p>
-          <p>FOR WEB SITE</p>
-          <div class="rotate-box">
-            <p class="point">WEB3</p>
-            <!-- <p class="point">HOSPITAL</p>
-            <p class="point">BANK</p> -->
-          </div>
-        </div>
+<div class="container">
+  <div class="section-inner">
+    <div class="heading-wrap">
+      <div class="intro">
+        <p class="opacity-05">Hi there! this is</p>
+        <span class="text-bold opacity-1">2024</span>
       </div>
-
-      <div class="scope-wrap">
-        <div class="box">
-          <span class="line"></span>
-          <ul>
-            <li>Website Design</li>
-            <li>Product Design</li>
-            <li>Branding & Strategy</li>
-          </ul>
-          <span class="line"></span>
-          <a href="" class="text-underline">How can I help?</a>
-        </div>
-        <div class="box">
-          <p class="text-sm opacity-02">I'm an award winning product designer specialized in financial products. I work for Hospital, Banking & Web3</p>
-          <span class="line"></span>
-          <div class="awords-icons">
-            <div class="icon">
-              <img src="./assets/images/red-dot-white.BCoP2Tnu.svg" alt="">
+      <div class="heading">
+        <h2>HEALTHCARE</h2>
+        <h2>FUTURE FORUM</h2>
+        <div class="swiper rotate-box">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h2 class="point">최고위과정 3기 </h2>
             </div>
-            <div class="icon">
-              <img src="./assets/images/uxdesign-white._MZKNTN5.svg" alt="">
+            <div class="swiper-slide">
+              <h2 class="point">고려대학교의료원</h2>
             </div>
-            <div class="icon">
-              <img src="./assets/images/dfa-white.BALS8Xtv.svg" alt="">
+            <div class="swiper-slide">
+              <h2 class="point">보건대학원</h2>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="img-wrap">
-      <img src="" alt="">
+
+    <div class="scope-wrap">
+      <div class="box">
+        <span class="line"></span>
+        <ul>
+          <li>조선일보의학전문기자</li>
+          <li>한국의학바이오기자협회 명예회장</li>
+          <li>김철중</li>
+        </ul>
+        <span class="line"></span>
+      </div>
+      <div class="box">
+        <p class="text-sm opacity-02">바이오·디지털 헬스케어 기업의 성장과 미래전략’이라는 타이틀로 헬스케어 및 보건의료 산업의 기업공개(IPO), 상장을 중점으로 다룬다.</p>
+        <span class="line"></span>
+        <div class="awords-icons">
+          <span class="opacity-02">고려대학교 보건대학원 최고위과정</span>
+          <div class="icon">
+            <!-- <img src="./assets/images/red-dot-white.BCoP2Tnu.svg" alt=""> -->
+            <img src="../../assets/images/img-qr.png" alt="">
+          </div>
+          <!-- <div class="icon">
+            <img src="./assets/images/uxdesign-white._MZKNTN5.svg" alt="">
+          </div>
+          <div class="icon">
+            <img src="./assets/images/dfa-white.BALS8Xtv.svg" alt="">
+          </div> -->
+        </div>
+      </div>
     </div>
   </div>
-</section>
+  <div class="img-wrap">
+    <img src="../../assets/images/first-man.png" alt="">
+  </div>
+</div>
+
+<script>
+  var swiper = new Swiper('.rotate-box', {
+    direction: "vertical",
+    effect: "cube",
+    grabCursor: true,
+    autoplay: true,
+    loop: true,
+    cubeEffect: {
+      shadow: false,
+    }
+  });
+
+  // scroll trigger
+  const section1Move = document.querySelectorAll(".section1 .img-wrap");
+
+  const section1MoveTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".section1",
+      start: "top top",
+      end: "top bottom",
+      scrub: true,
+      pin: true
+    }
+  });
+  section1MoveTimeline.from(section1Move, {
+    duration: 10,
+    y: "-350px",
+    scale: 1,
+  });
+  section1MoveTimeline.to(section1Move, {
+    duration: 10,
+    x: "100px",
+    y: "200px",
+    scale: 1.05,
+    scrollTrigger: {
+      trigger: ".section1",
+      start: "top+100",
+      end: "bottom+=500",
+      scrub: 1,
+      pin: true,
+      //anticipatePin: 1
+    }
+  });
+
+  gsap.to(".section1 .section-inner", {
+    scrollTrigger: {
+      trigger: ".section1 .section-inner", // 애니메이션을 트리거할 요소
+      start: "top top", // 애니메이션 시작 위치
+      end: "bottom+=2000",
+      scrub: 3,         // 스크롤에 따라 애니메이션 동기화
+      toggleClass:{
+        targets:'.img-wrap',
+        className:'nav-active'
+      },
+    },
+    y: -900,             // 애니메이션 효과 (예: x축으로 500px 이동)
+    duration: 1          // 애니메이션 지속 시간
+  });
+
+  gsap.to(".section1 .img-wrap", {
+    scrollTrigger: {
+      trigger: ".awords-icons", // 애니메이션을 트리거할 요소
+      start: "bottom", 
+      end: "top center",
+      scrub: 3,         
+      toggleClass:{
+        targets:'.img-wrap',
+        className:'nav-active'
+      },
+      pin: true
+    },
+    autoAlpha: 0.5,
+  });
+  // end: SECTION1 //
+</script>

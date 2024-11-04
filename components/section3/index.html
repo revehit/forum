@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="loop-outer main">
+    <div class="loop-track track1">
+      <p class="text">
+        <span class="spin">Growth</span>
+        <span class="spin">Future</span>
+        <span class="spin">Strategies</span>
+        <span class="spin">Bio</span>
+        <span class="spin">Digital Healthcare</span>
+        <span class="spin">Companies</span>
+        <span class="spin">Growth</span>
+        <span class="spin">Future</span>
+        <span class="spin">Strategies</span>
+        <span class="spin">Bio</span>
+        <span class="spin">Digital Healthcare</span>
+        <span class="spin">Companies</span>
+      </p>
+    </div>
+  </div>
+  <div class="loop-outer sub">
+    <div class="loop-track track2">
+      <p class="text">
+        <span class="spin">바이오</span>
+        <span class="spin">디지털 헬스케어</span>
+        <span class="spin">기업의 성장</span>
+        <span class="spin">미래전략</span>
+        <span class="spin">바이오</span>
+        <span class="spin">디지털 헬스케어</span>
+        <span class="spin">기업의 성장</span>
+        <span class="spin">미래전략</span>
+        <span class="spin">바이오</span>
+        <span class="spin">디지털 헬스케어</span>
+        <span class="spin">기업의 성장</span>
+        <span class="spin">미래전략</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  let $text1 = $('.section3 .main .track1 .text'); // 애니메이션 대상 지정
+  let $wrap1 = $('.section3 .main .track1'); // 애니메이션 영역 선택
+  let $text2 = $('.section3 .sub .track2 .text');
+  let $wrap2 = $('.section3 .sub .track2');
+
+  $text1.clone().appendTo($wrap1);//대상을 복사하여 무한히 보일수 있도록 함
+  $text2.clone().appendTo($wrap2);
+
+  TweenMax.to($wrap1, 100, { // 100 : 애니메이션 기간 , 애니메이션을 100초 동안 실행
+    x: -($text1.width()), // text 2개의 너비 만큼 왼쪽 가로로 움직임
+    ease: Linear.easeNone, //선형 이징 : 일정한 속도로 이동
+    repeat: -1 // 무한히 반복 : -1 , 한번 실행 : 0
+  });
+
+  TweenMax.to($wrap2, 100, {
+    x: -($text2.width()),
+    ease: Linear.easeNone,
+    repeat: -1
+  });
+
+  $('.section3 .loop-outer.sub').hover(function () {
+    $('.loop-outer.main').toggleClass('on');
+  });
+</script>

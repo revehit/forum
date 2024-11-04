@@ -1,0 +1,195 @@
+<div class="container">
+  <h2>
+    <span class="opacity-03">Alumni Association</span><br/>
+    <span class="opacity-03">Photo Review</span><br/>
+    <span class="opacity-02">2024</span>
+    <span class="point">③</span>
+  </h2>
+  <div class="slider-wrap">
+    <div class="inditator-box">
+      <div class="pagination">
+        <div class="image-box">
+          <div class="image-item on">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="../../assets/images/section4-item1.jpg" alt="">
+          </div>
+          <div class="image-item">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="../../assets/images/section4-item2.jpg" alt="">
+          </div>
+          <div class="image-item">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="../../assets/images/section4-item3.jpg" alt="">
+          </div>
+          <div class="image-item">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="../../assets/images/section4-item4.jpg" alt="">
+          </div>
+        </div>
+        <div class="num-box">
+          <div class="now-outer">
+            <span class="now n1">1</span>
+            <span class="now n2">2</span>
+            <span class="now n3">3</span>
+            <span class="now n4">4</span>
+          </div>
+          <span>/</span>
+          <span class="total">4</span>
+        </div>
+        <div class="name-box">
+          <h3>PHOTO</h3>
+        </div>
+      </div>
+    </div>
+    <div class="thum-box">
+      <div class="thum-item item1">
+        <img src="../../assets/images/section4-item1.jpg" alt="">
+      </div>
+      <div class="thum-item item2">
+        <img src="../../assets/images/section4-item2.jpg" alt="">
+      </div>
+      <div class="thum-item item3">
+        <img src="../../assets/images/section4-item3.jpg" alt="">
+      </div>
+      <div class="thum-item item4">
+        <img src="../../assets/images/section4-item4.jpg" alt="">
+      </div>
+    </div>
+    <div class="detail-box">
+      <div class="detail-item date">
+        <b class="opacity-05">Date</b>
+        <div class="ani-outer">
+          <p class="d1 ani-item">2024.<span>10.15</span></p>
+          <p class="d2 ani-item">2024.<span>10.15</span></p>
+          <p class="d3 ani-item">2024.<span>10.29</span></p>
+          <p class="d4 ani-item">2024.<span>10.29</span></p>
+        </div>
+      </div>
+      <div class="detail-item people">
+        <b class="opacity-05">Lecturer</b>
+        <div class="ani-outer">
+          <p class="p1 ani-item">최은영 삼일회계법인 회계사</p>
+          <p class="p2 ani-item">이행규 법무법인 지평 변호사</p>
+          <p class="p3 ani-item">정혜윤 더클라쎄 특허법률사무소 변리사</p>
+          <p class="p4 ani-item">김철중 교장님, 강도태 교장님</p>
+        </div>
+        
+      </div>
+      <div class="detail-item description">
+        <b class="opacity-05">Lecture Title</b>
+        <div class="ani-outer">
+          <p class="de1 ani-item">국제회계기준(IFRS) 도입전략 및 <br/>내부회계관리제도 구축</p>
+          <p class="de2 ani-item">IPO 성공을 위해 CEO가 알아야 할 8가지</p>
+          <p class="de3 ani-item">기술특허상장평가를 위한 전략</p>
+          <p class="de4 ani-item">단합을 위한 3교시 모임(수다에서)</p>
+        </div>
+      </div>
+      <a href="" class="btn-link text-underline point">All projects</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const sec4NumBox = gsap.timeline({
+    // onComplete: () => {
+    //   // .n2 애니메이션 완료 후 .n2를 아래로 이동
+    //   gsap.to(".section4 .slider-wrap .num-box div .n2", { y: "200%" });
+    //   gsap.to(".section4 .slider-wrap .num-box div .n3", { y: "200%" });
+    // }
+  });
+  sec4NumBox
+      .from(".section4 .slider-wrap .num-box div .n2", {y: "100%", opacity: 1})
+      .from(".section4 .slider-wrap .num-box div .n3", {y: "100%", opacity: 1})
+      .from(".section4 .slider-wrap .num-box div .n4", {y: "100%",})
+
+  ScrollTrigger.create({
+      animation: sec4NumBox,
+      trigger: ".section4 .slider-wrap",
+      start: "top top",
+      end: "+=2000",
+      scrub: true,
+      anticipatePin: 1,
+  });
+
+  const sec4ThumBox = gsap.timeline();
+  sec4ThumBox
+      .from(".section4 .slider-wrap .thum-box .item2", {y: "100%",x: "100%",})
+      .from(".section4 .slider-wrap .thum-box .item3", {y: "100%",x: "100%",})
+      .from(".section4 .slider-wrap .thum-box .item4", {y: "100%",x: "100%",});
+
+  ScrollTrigger.create({
+      animation: sec4ThumBox,
+      trigger: ".section4 .slider-wrap",
+      start: "top top",
+      end: "+=2000",
+      scrub: true,
+      pin: true,
+      anticipatePin: 1,
+      markers: false
+  });
+
+  const sec4DateBox = gsap.timeline();
+  sec4DateBox
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d2", {y: "100%", opacity: 1})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d3", {y: "100%", opacity: 1})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d4", {y: "100%", opacity: 1});
+
+  ScrollTrigger.create({
+      animation: sec4DateBox,
+      trigger: ".section4 .slider-wrap",
+      start: "top top",
+      end: "+=2000",
+      scrub: true,
+      anticipatePin: 1,
+  });
+
+  const sec4PeopleBox = gsap.timeline();
+  sec4PeopleBox
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p2", {y: "100%", opacity: 1})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p3", {y: "100%", opacity: 1})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p4", {y: "100%", opacity: 1});
+
+  ScrollTrigger.create({
+      animation: sec4PeopleBox,
+      trigger: ".section4 .slider-wrap",
+      start: "top top",
+      end: "+=2000",
+      scrub: true,
+      anticipatePin: 1,
+  });
+
+  const sec4DeBox = gsap.timeline({
+    onComplete: () => {
+      // .n2와 .n3 애니메이션이 완료된 후 위치 조정
+      gsap.to(".section4 .slider-wrap .num-box .ani-outer .de2", { y: "200%", opacity: 0 }); // opacity 추가
+      gsap.to(".section4 .slider-wrap .num-box .ani-outer .de3", { y: "200%", opacity: 0 }); // opacity 추가
+    }
+  });
+  sec4DeBox
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de2", {y: "100%", opacity: 1})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de3", {y: "100%", opacity: 1})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de4", {y: "100%", opacity: 1});
+
+  ScrollTrigger.create({
+      animation: sec4DeBox,
+      trigger: ".section4 .slider-wrap",
+      start: "top top",
+      end: "+=2000",
+      scrub: true,
+      anticipatePin: 1,
+  });
+  
+  
+</script>

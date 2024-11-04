@@ -1,0 +1,59 @@
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="link-box">
+        <!-- <ul>
+          <li>Socials</li>
+          <li><a href="" class="point">LikedIn</a></li>
+          <li><a href="" class="point">Dribbble</a></li>
+          <li><a href="" class="point">Twitter/X</a></li>
+        </ul> -->
+        <ul>
+          <li>Contact me</li>
+          <li><a href="" class="point">Email</a></li>
+          <li><a href="" class="point">WhatsApp</a></li>
+        </ul>
+        <span class="line"></span>
+        <h4>
+          <p class="point">헬스케어퓨처포럼 공동 대표</p>
+          <p>고려대학교 보건대학원 특임교수<br/>
+            제9대 국민건강보험공단 이사장</p>
+            <strong>강도태</strong>
+        </h4>
+      </div>
+      <div class="word-box">
+        <h4>지원자격</h4>
+        <div class="word">
+          헬스케어회사 경영진<br/>
+          바이오 제약회사 임원<br/>
+          의료기술 전문가<br/>
+          대학병원 연구 책임자<br/>
+          보건의료 분야 투자유치에 관심 있는 헬스케어 경영자<br/>
+          보건의료 관련 단체 및 공공기관 임원 및 책임자 등
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="moving-text track1">
+    <p class="text">
+      revehit<span class="point">@</span>revehit.com 
+      revehit<span class="point">@</span>revehit.com 
+      revehit<span class="point">@</span>revehit.com</p>
+  </div>
+  <div class="lastman-box">
+    <img src="../../assets/images/last-man.png" alt="">
+  </div>
+</footer>
+
+<script>
+  let $footertext = $('footer').find('.track1 .text'); // 애니메이션 대상 지정
+  let $footerwrap = $('footer').find('.track1'); // 애니메이션 영역 선택
+
+  $footertext.clone().appendTo($footerwrap);//대상을 복사하여 무한히 보일수 있도록 함
+
+  TweenMax.to($footerwrap, 50, { // 100 : 애니메이션 기간 , 애니메이션을 100초 동안 실행
+    x: -($footertext.width()), // text 2개의 너비 만큼 왼쪽 가로로 움직임
+    ease: Linear.easeNone, //선형 이징 : 일정한 속도로 이동
+    repeat: -1, // 무한히 반복 : -1 , 한번 실행 : 0
+  });
+</script>
