@@ -155,19 +155,18 @@
 <!-- <script>
   const sec5List = gsap.timeline();
   sec5List
-      .from(".section5 .member-list", {
-        y: "100%", 
-      })
+      .from(".section5 .member-list",
+        //{y: "0%"},
+        {y: "100%"}
+      )
 
   ScrollTrigger.create({
       animation: sec5List,
-      trigger: ".section5",
-      //start: "top top",
+      trigger: ".section5 .member-list",
       start: "top center",
-      end: "bottom top",
-      //end: "top+=3000",
+      end: "bottom",
       scrub: 1,
       pin: true,
-      anticipatePin: 1,
+      markers: true,
   });
 </script> -->

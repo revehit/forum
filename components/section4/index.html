@@ -102,17 +102,12 @@
 </div>
 
 <script>
-  const sec4NumBox = gsap.timeline({
-    // onComplete: () => {
-    //   // .n2 애니메이션 완료 후 .n2를 아래로 이동
-    //   gsap.to(".section4 .slider-wrap .num-box div .n2", { y: "200%" });
-    //   gsap.to(".section4 .slider-wrap .num-box div .n3", { y: "200%" });
-    // }
-  });
+  
+  const sec4NumBox = gsap.timeline();
   sec4NumBox
-      .from(".section4 .slider-wrap .num-box div .n2", {y: "100%", autoAlpha: 0, skew: 30})
-      .from(".section4 .slider-wrap .num-box div .n3", {y: "100%", autoAlpha: 0, skew: 30})
-      .from(".section4 .slider-wrap .num-box div .n4", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .num-box div .n2", {y: "100%", autoAlpha: 0})
+      .from(".section4 .slider-wrap .num-box div .n3", {y: "100%", autoAlpha: 0})
+      .from(".section4 .slider-wrap .num-box div .n4", {y: "100%", autoAlpha: 0});
 
   ScrollTrigger.create({
       animation: sec4NumBox,
@@ -142,9 +137,9 @@
 
   const sec4DateBox = gsap.timeline();
   sec4DateBox
-      .from(".section4 .slider-wrap .detail-box .ani-outer .d2", {y: "100%", autoAlpha: 0, skew: 30})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .d3", {y: "100%", autoAlpha: 0, skew: 30})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .d4", {y: "100%", autoAlpha: 0, skew: 30});
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d2", {y: "100%", autoAlpha: 0})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d3", {y: "100%", autoAlpha: 0})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d4", {y: "100%", autoAlpha: 0});
 
   ScrollTrigger.create({
       animation: sec4DateBox,
@@ -157,9 +152,9 @@
 
   const sec4PeopleBox = gsap.timeline();
   sec4PeopleBox
-      .from(".section4 .slider-wrap .detail-box .ani-outer .p2", {y: "100%", autoAlpha: 0, skew: 30})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .p3", {y: "100%", autoAlpha: 0, skew: 30})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .p4", {y: "100%", autoAlpha: 0, skew: 30});
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p2", {y: "100%", autoAlpha: 0})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p3", {y: "100%", autoAlpha: 0})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p4", {y: "100%", autoAlpha: 0});
 
   ScrollTrigger.create({
       animation: sec4PeopleBox,
@@ -172,9 +167,9 @@
 
   const sec4DeBox = gsap.timeline();
   sec4DeBox
-      .from(".section4 .slider-wrap .detail-box .ani-outer .de2", {y: "100%", autoAlpha: 0, skew: 30})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .de3", {y: "100%", autoAlpha: 0, skew: 30})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .de4", {y: "100%", autoAlpha: 0, skew: 30});
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de2", {y: "100%", autoAlpha: 0})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de3", {y: "100%", autoAlpha: 0})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de4", {y: "100%", autoAlpha: 0});
 
   ScrollTrigger.create({
       animation: sec4DeBox,
@@ -184,6 +179,4 @@
       scrub: true,
       anticipatePin: 1,
   });
-  
-  
 </script>

@@ -1,4 +1,7 @@
 <footer>
+  <div class="footer-bg">
+    <img src="images/footer-bg.webp" alt="">
+  </div>
   <div class="container">
     <div class="footer-inner">
       <div class="link-box">
@@ -35,7 +38,9 @@
       revehit<span class="point">@</span>revehit.com</p>
   </div>
   <div class="lastman-box ver2">
-    <img src="images/last-man.jpeg" alt="">
+    <!-- <img src="images/last-man.jpeg" alt="" class="img1"> -->
+    <img src="images/last-man.png" alt="" class="img1">
+    <!-- <img src="images/last-man2.png" alt="" class="img2"> -->
   </div>
 </footer>
 
@@ -51,20 +56,46 @@
     repeat: -1, // 무한히 반복 : -1 , 한번 실행 : 0
   });
 
-  gsap.registerPlugin(ScrollTrigger);
 
 // ScrollTrigger를 사용하여 스크롤 이벤트 추가
+// ScrollTrigger.create({
+//   trigger: 'footer', // footer가 트리거 되는 부분
+//   start: 'top center', // 스크롤 트리거 시작 위치 (footer가 보일 때)
+//   end: 'bottom top', // 스크롤 트리거 끝나는 위치 (footer가 사라질 때)
+//   onToggle: self => {
+//     const isFooterVisible = self.isActive;
+//     if (isFooterVisible) {
+//       gsap.to('.lastman-box', { scale: 1, duration: 0.5 });
+//     } else {
+//       gsap.to('.lastman-box', { scale: 3, duration: 0.5 });
+//     }
+//   },
+// });
+
+const footerBg = gsap.timeline();
+const footerBgImg = gsap.timeline();
+
+footerBg.fromTo(".footer-bg", 
+  {background: "#fff"},
+  {background: "#111"},
+);
 ScrollTrigger.create({
-  trigger: 'footer', // footer가 트리거 되는 부분
-  start: 'top center', // 스크롤 트리거 시작 위치 (footer가 보일 때)
-  end: 'bottom top', // 스크롤 트리거 끝나는 위치 (footer가 사라질 때)
-  onToggle: self => {
-    const isFooterVisible = self.isActive;
-    if (isFooterVisible) {
-      gsap.to('.lastman-box', { scale: 1, duration: 0.5 });
-    } else {
-      gsap.to('.lastman-box', { scale: 3, duration: 0.5 });
-    }
-  },
+  animation: footerBg,
+  trigger: "footer",
+  start: "top top", 
+  end: "top+=2000",
+  scrub: 1,
+  pin: true
+});
+footerBgImg.fromTo(".footer-bg img", 
+  {autoAlpha: "1", y: "0%"},
+  {autoAlpha: "0", y: "-100%"}
+);
+ScrollTrigger.create({
+  animation: footerBgImg,
+  trigger: "footer",
+  start: "top center", 
+  end: "top+=2000",
+  scrub: 1,
 });
 </script>
