@@ -31,7 +31,8 @@ footer {
 .footer-bg {
   position: absolute;
   height: auto;
-  bottom: 0%;
+  //bottom: 0%;
+  top: 0;
   img {
     width: 100%;
     height: auto;
@@ -116,7 +117,7 @@ footer {
   display: flex;
   position: absolute;
   bottom: 0;
-  z-index: 5;
+  z-index: 4;
   .text {
     margin: 0 1rem;
     white-space: nowrap;

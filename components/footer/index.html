@@ -74,6 +74,7 @@
 
 const footerBg = gsap.timeline();
 const footerBgImg = gsap.timeline();
+//const footerMovingText= gsap.timeline();
 
 footerBg.fromTo(".footer-bg", 
   {background: "#fff"},
@@ -83,7 +84,7 @@ ScrollTrigger.create({
   animation: footerBg,
   trigger: "footer",
   start: "top top", 
-  end: "top+=2000",
+  end: "top+=1000",
   scrub: 1,
   pin: true
 });
@@ -95,7 +96,18 @@ ScrollTrigger.create({
   animation: footerBgImg,
   trigger: "footer",
   start: "top center", 
-  end: "top+=2000",
+  end: "top+=1000",
   scrub: 1,
 });
+// footerMovingText.fromTo(".moving-text", 
+//   {background:"#fff"},
+//   {background:"#111"},
+// );
+// ScrollTrigger.create({
+//   animation: footerMovingText,
+//   trigger: "footer",
+//   start: "top center", 
+//   end: "top+=1000",
+//   scrub: 1,
+// });
 </script>
