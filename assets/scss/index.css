@@ -810,7 +810,7 @@ section {
   content: "";
   width: 5rem;
   height: 5rem;
-  background-image: url(images/icon-flower.png);
+  background-image: url(../../../images/icon-flower.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
