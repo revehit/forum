@@ -1,8 +1,9 @@
 footer {
+  height: 100vh;
   position: relative;
   z-index: 3;
   overflow: hidden;
-  background-color: var(--color-darken);
+  //background-color: var(--color-darken);
   padding-top: 20rem;
   .lastman-box {
     position: absolute;
@@ -16,12 +17,30 @@ footer {
       display: block;
       margin-left: 20%;
     }
+    &.ver2 {
+      transform: scale(2);
+      img {
+        width: 100%;
+        margin-left: 0;
+        object-fit: cover;
+      }
+    }
+  }
+}
+.footer-bg {
+  position: absolute;
+  height: auto;
+  bottom: 0%;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
   }
 }
 .footer-inner {
   display: flex;
   color: var(--color-white);
-  //padding-top: 10rem;
   padding-bottom: 10rem;
   position: relative;
   z-index: 5;
@@ -30,9 +49,6 @@ footer {
   width: 25%;
   padding-right: 5%;
   margin-bottom: 10rem;
-  ul {
-    //margin-bottom: auto;
-  }
   li {
     padding-top: 0.5rem;
   }
@@ -99,7 +115,7 @@ footer {
   display: flex;
   position: absolute;
   bottom: 0;
-  z-index: 3;
+  z-index: 5;
   .text {
     margin: 0 1rem;
     white-space: nowrap;

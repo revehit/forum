@@ -2,12 +2,6 @@
   <div class="container">
     <div class="footer-inner">
       <div class="link-box">
-        <!-- <ul>
-          <li>Socials</li>
-          <li><a href="" class="point">LikedIn</a></li>
-          <li><a href="" class="point">Dribbble</a></li>
-          <li><a href="" class="point">Twitter/X</a></li>
-        </ul> -->
         <ul>
           <li>Contact me</li>
           <li><a href="" class="point">Email</a></li>
@@ -40,8 +34,8 @@
       revehit<span class="point">@</span>revehit.com 
       revehit<span class="point">@</span>revehit.com</p>
   </div>
-  <div class="lastman-box">
-    <img src="../../assets/images/last-man.png" alt="">
+  <div class="lastman-box ver2">
+    <img src="../../assets/images/last-man.jpeg" alt="">
   </div>
 </footer>
 
@@ -56,4 +50,21 @@
     ease: Linear.easeNone, //선형 이징 : 일정한 속도로 이동
     repeat: -1, // 무한히 반복 : -1 , 한번 실행 : 0
   });
+
+  gsap.registerPlugin(ScrollTrigger);
+
+// ScrollTrigger를 사용하여 스크롤 이벤트 추가
+ScrollTrigger.create({
+  trigger: 'footer', // footer가 트리거 되는 부분
+  start: 'top center', // 스크롤 트리거 시작 위치 (footer가 보일 때)
+  end: 'bottom top', // 스크롤 트리거 끝나는 위치 (footer가 사라질 때)
+  onToggle: self => {
+    const isFooterVisible = self.isActive;
+    if (isFooterVisible) {
+      gsap.to('.lastman-box', { scale: 1, duration: 0.5 });
+    } else {
+      gsap.to('.lastman-box', { scale: 3, duration: 0.5 });
+    }
+  },
+});
 </script>

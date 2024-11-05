@@ -21,21 +21,21 @@
             <span></span>
             <span></span>
             <span></span>
-            <img src="../../assets/images/section4-item2.jpg" alt="">
+            <!-- <img src="../../assets/images/section4-item2.jpg" alt=""> -->
           </div>
           <div class="image-item">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            <img src="../../assets/images/section4-item3.jpg" alt="">
+            <!-- <img src="../../assets/images/section4-item3.jpg" alt=""> -->
           </div>
           <div class="image-item">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            <img src="../../assets/images/section4-item4.jpg" alt="">
+            <!-- <img src="../../assets/images/section4-item4.jpg" alt=""> -->
           </div>
         </div>
         <div class="num-box">
@@ -91,9 +91,9 @@
         <b class="opacity-05">Lecture Title</b>
         <div class="ani-outer">
           <p class="de1 ani-item">국제회계기준(IFRS) 도입전략 및 <br/>내부회계관리제도 구축</p>
-          <p class="de2 ani-item">IPO 성공을 위해 CEO가 알아야 할 8가지</p>
-          <p class="de3 ani-item">기술특허상장평가를 위한 전략</p>
-          <p class="de4 ani-item">단합을 위한 3교시 모임(수다에서)</p>
+          <p class="de2 ani-item">IPO 성공을 위해 CEO가 알아야 할 8가지<br></p>
+          <p class="de3 ani-item">기술특허상장평가를 위한 전략<br></p>
+          <p class="de4 ani-item">단합을 위한 3교시 모임(수다에서)<br></p>
         </div>
       </div>
       <a href="" class="btn-link text-underline point">All projects</a>
@@ -110,9 +110,9 @@
     // }
   });
   sec4NumBox
-      .from(".section4 .slider-wrap .num-box div .n2", {y: "100%", opacity: 1})
-      .from(".section4 .slider-wrap .num-box div .n3", {y: "100%", opacity: 1})
-      .from(".section4 .slider-wrap .num-box div .n4", {y: "100%",})
+      .from(".section4 .slider-wrap .num-box div .n2", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .num-box div .n3", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .num-box div .n4", {y: "100%", autoAlpha: 0, skew: 30})
 
   ScrollTrigger.create({
       animation: sec4NumBox,
@@ -142,9 +142,9 @@
 
   const sec4DateBox = gsap.timeline();
   sec4DateBox
-      .from(".section4 .slider-wrap .detail-box .ani-outer .d2", {y: "100%", opacity: 1})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .d3", {y: "100%", opacity: 1})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .d4", {y: "100%", opacity: 1});
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d2", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d3", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .d4", {y: "100%", autoAlpha: 0, skew: 30});
 
   ScrollTrigger.create({
       animation: sec4DateBox,
@@ -157,9 +157,9 @@
 
   const sec4PeopleBox = gsap.timeline();
   sec4PeopleBox
-      .from(".section4 .slider-wrap .detail-box .ani-outer .p2", {y: "100%", opacity: 1})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .p3", {y: "100%", opacity: 1})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .p4", {y: "100%", opacity: 1});
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p2", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p3", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .p4", {y: "100%", autoAlpha: 0, skew: 30});
 
   ScrollTrigger.create({
       animation: sec4PeopleBox,
@@ -170,17 +170,11 @@
       anticipatePin: 1,
   });
 
-  const sec4DeBox = gsap.timeline({
-    onComplete: () => {
-      // .n2와 .n3 애니메이션이 완료된 후 위치 조정
-      gsap.to(".section4 .slider-wrap .num-box .ani-outer .de2", { y: "200%", opacity: 0 }); // opacity 추가
-      gsap.to(".section4 .slider-wrap .num-box .ani-outer .de3", { y: "200%", opacity: 0 }); // opacity 추가
-    }
-  });
+  const sec4DeBox = gsap.timeline();
   sec4DeBox
-      .from(".section4 .slider-wrap .detail-box .ani-outer .de2", {y: "100%", opacity: 1})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .de3", {y: "100%", opacity: 1})
-      .from(".section4 .slider-wrap .detail-box .ani-outer .de4", {y: "100%", opacity: 1});
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de2", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de3", {y: "100%", autoAlpha: 0, skew: 30})
+      .from(".section4 .slider-wrap .detail-box .ani-outer .de4", {y: "100%", autoAlpha: 0, skew: 30});
 
   ScrollTrigger.create({
       animation: sec4DeBox,

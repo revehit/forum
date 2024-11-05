@@ -19,7 +19,7 @@ section {
       font-size: 1rem;
       margin-top: auto;
       p {
-        font-size: 0.8rem;
+        font-size: 1rem;//0.8
         margin-bottom: 1rem;
       }
       span {
@@ -62,7 +62,7 @@ section {
       ul {
         li {
           opacity: 0.5;
-          font-size: 0.8rem;
+          font-size: 1rem;//0.8
           & + li {
             margin-top: 0.5rem;
           }
